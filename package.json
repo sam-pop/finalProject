@@ -1,0 +1,21 @@
+{
+  "name": "inTheLoop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sam-pop/inTheLoop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sam-pop/inTheLoop/issues"
+  },
+  "homepage": "https://github.com/sam-pop/inTheLoop#readme"
+}
