@@ -11,12 +11,17 @@ app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
 }
 // Add routes, both API and view
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/intheloop");
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/intheloop");
 
 // Start the API server
 app.listen(PORT, function() {

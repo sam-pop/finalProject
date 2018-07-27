@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -17,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/sam-pop/inTheLoop/issues"
   },
-  "homepage": "https://github.com/sam-pop/inTheLoop#readme"
+  "homepage": "https://github.com/sam-pop/inTheLoop#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.4",
+    "path": "^0.12.7"
+  }
 }
