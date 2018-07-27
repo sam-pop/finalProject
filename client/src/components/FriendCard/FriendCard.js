@@ -5,8 +5,12 @@ import "./FriendCard.css";
 
 const FriendCard = props => (
     <Container>
-        <ProfilePhoto />
-        <Weather />
-        <News />
+        <Row>
+            <Col size="md-12">
+                <ProfilePhoto />
+                <Weather />
+                <News />
+            </Col>
+        </Row>
     </Container>
 );
