@@ -2,15 +2,16 @@ import axios from "axios";
 
 const GEOCODE_API_KEY = "";
 const GEOCODE_URL = 
-    "https://maps.googleapis.com/maps/api/geocode/json?address=";
+    "https://maps.googleapis.com/maps/api/geocode/json?key=" 
+    + GEOCODE_API_KEY + "&address=";
 
-const DARKSKY_API_KEY = "e05c706e7ef08da86d7958131e737b10";
+const DARKSKY_API_KEY = "";
 const DARKSKY_URL = 
     "https;//api.darksky.net/forecast/" 
     + DARKSKY_API_KEY; // add /<latitude>,<longitude>
 
 
-const NEWS_API_KEY = "277364822b97433ebb96c7413e3036a0";
+const NEWS_API_KEY = "";
 const NEWS_URL = 
     "https://newsapi.org/v2/everything?sources=reuters&apiKey=" 
     + NEWS_API_KEY; // add q=<coutnry> 

@@ -10,13 +10,29 @@ const FriendCard = props => (
     <Card>
         <Row>
             <Col size="md-12">
-                <ProfilePhoto />
-                <Weather />
+                <ProfilePhoto
+                    profile_pic={props.profile_pic}
+                />
+                <div>
+                    Name: {props.name}
+                </div>
+                <Weather 
+                    location={props.location}
+                />
             </Col>
         </Row>
         <Row>
             <Col size="md-12">
-                <News />
+                <div>
+                    Reminder: {props.reminder}
+                </div>
+            </Col>
+        </Row>
+        <Row>
+            <Col size="md-12">
+                <News 
+                    location={props.location}
+                />
             </Col>
         </Row>
     </Card>
