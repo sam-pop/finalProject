@@ -11,6 +11,7 @@ const FriendCard = props => (
         <Row>
             <Col size="md-12">
                 <ProfilePhoto
+                    name={props.name}
                     profile_pic={props.profile_pic}
                 />
                 <div>
