@@ -36,7 +36,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes (API and view)
-// require('./routes/api_routes')(app);
+require('./routes/api_routes')(app);
 // app.use(routes);
 
 // Connect to the Mongo DB

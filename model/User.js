@@ -1,14 +1,15 @@
-const bcrypt = require("bcrypt-nodejs");
+const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
+const SALT_WORK_FACTOR = 10;
 
 const userSchema = new Schema({
-  email      : { type: String,  required: true, index: { unique: true } },
-  password   : { type: String,  required: true },
-  name       : { type: String,  required: true },
-  profile_pic: { type: String,  required: true },
-  location   : [       Number, [Number  ]]
+  email      : { type: String, required: true, index: { unique: true } },
+  password   : { type: String, required: true },
+  name       : { type: String, required: true },
+  profile_pic: String,
+  location   : [ Number, [Number]]
 });
 
 userSchema.pre("save", function(next) {
