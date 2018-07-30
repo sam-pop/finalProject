@@ -1,7 +1,9 @@
 const express = require("express");
+const session = require("express-session");
+const passport = require("./config/passport");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-// const routes     = require("./routes")     ;
+const routes = require("./routes");
 
 const PORT = process.env.PORT || 3001;
 // Initialize express app
@@ -20,8 +22,22 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+// init and config our express session
+app.use(
+  session({
+    secret: "big balagan",
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+// passport init
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Routes (API and view)
-// app.use(routes);
+require("./controllers/user_controller")(app);
+app.use(routes);
 
 // Connect to the Mongo DB
 // If deployed, use the deployed database. Otherwise use the local newsScraper database
