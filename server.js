@@ -36,8 +36,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes (API and view)
-require("./controllers/user_controller")(app);
-app.use(routes);
+// require('./routes/api_routes')(app);
+// app.use(routes);
 
 // Connect to the Mongo DB
 // If deployed, use the deployed database. Otherwise use the local newsScraper database
