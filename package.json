@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sam-pop/inTheLoop/issues"
   },
-  "homepage": "https://github.com/sam-pop/inTheLoop#readme"
+  "homepage": "https://github.com/sam-pop/inTheLoop#readme",
+  "dependencies": {
+    "mongoose": "^5.2.5"
+  }
 }
