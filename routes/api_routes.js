@@ -1,3 +1,5 @@
+// todo: integrate into api folder and remove
+
 // Dependencies
 const passport = require("../config/passport");
 const isAuth_Destroy = require("../config/middleware/isAuth_Destroy");
