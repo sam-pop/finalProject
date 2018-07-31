@@ -4,15 +4,28 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import FriendCard from "../../components/FriendCard/FriendCard";
 import MapCard from "../../components/MapCard";
+import { userInfo } from "os";
 
 class Home extends Component {
   state = {
+    user: "",
     friends: []
   };
 
   componentDidMount() {
+    this.loadUser();
     this.loadFriends();
   }
+
+  loadUser = () => {
+    API.getUser()
+      .then(res =>
+        this.setState({
+          user: res.data
+        })
+      )
+      .catch(err => console.log(err));
+  };
 
   loadFriends = () => {
     API.getFriends()
@@ -29,7 +42,11 @@ class Home extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <UserCard />
+            <UserCard 
+              name={user.name}
+              profile_pic={user.profile_pic}
+              location={user.location}
+            />
           </Col>
         </Row>
         <Row>
