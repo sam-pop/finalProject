@@ -47,7 +47,7 @@ class Home extends Component {
             )}
           </Col>
           <Col size="md-12">
-            {/* <MapCa  rd /> */}
+            <MapCard />
           </Col>
         </Row>
       </Container>
