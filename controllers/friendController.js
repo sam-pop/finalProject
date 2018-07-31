@@ -2,7 +2,7 @@ const db = require("../model");
 
 module.exports = {
   findAll: function(req, res) {
-    db.Friend.find(req.query)
+    db.Friend.find({})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

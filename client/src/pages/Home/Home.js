@@ -12,30 +12,30 @@ class Home extends Component {
     friends: []
   };
 
-  //   componentDidMount() {
-  //     this.loadUser();
-  //     this.loadFriends();
-  //   }
+    componentDidMount() {
+      this.loadUser();
+      this.loadFriends();
+    }
 
-  //   loadUser = () => {
-  //     API.getUser()
-  //       .then(res =>
-  //         this.setState({
-  //           user: res.data
-  //         })
-  //       )
-  //       .catch(err => console.log(err));
-  //   };
+    loadUser = () => {
+      API.getUser()
+        .then(res =>
+          this.setState({
+            user: res.data
+          })
+        )
+        .catch(err => console.log(err));
+    };
 
-  //   loadFriends = () => {
-  //     API.getFriends()
-  //       .then(res =>
-  //         this.setState({
-  //           friends: res.data
-  //         })
-  //       )
-  //       .catch(err => console.log(err));
-  //   };
+    loadFriends = () => {
+      API.getFriends()
+        .then(res =>
+          this.setState({
+            friends: res.data
+          })
+        )
+        .catch(err => console.log(err));
+    };
 
   render() {
     return (
