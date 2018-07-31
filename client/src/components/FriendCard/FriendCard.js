@@ -14,9 +14,16 @@ const FriendCard = props => (
                     name={props.name}
                     profile_pic={props.profile_pic}
                 />
-                <div>
-                    Name: {props.name}
-                </div>
+                <Row>
+                    <Col size="md-12">
+                        Name: {props.name}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col size="md-12">
+                        Location: {props.location}
+                    </Col>
+                </Row>
                 <Weather 
                     location={props.location}
                 />

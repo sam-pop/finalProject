@@ -29,6 +29,11 @@ class Home extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
+            <UserCard />
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-12">
             {this.state.friends.length ? (
               <List>
                 {this.state.friends.map(friend => (
