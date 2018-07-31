@@ -13,30 +13,30 @@ class Home extends Component {
     friends: []
   };
 
-//   componentDidMount() {
-//     this.loadUser();
-//     this.loadFriends();
-//   }
+  //   componentDidMount() {
+  //     this.loadUser();
+  //     this.loadFriends();
+  //   }
 
-//   loadUser = () => {
-//     API.getUser()
-//       .then(res =>
-//         this.setState({
-//           user: res.data
-//         })
-//       )
-//       .catch(err => console.log(err));
-//   };
+  //   loadUser = () => {
+  //     API.getUser()
+  //       .then(res =>
+  //         this.setState({
+  //           user: res.data
+  //         })
+  //       )
+  //       .catch(err => console.log(err));
+  //   };
 
-//   loadFriends = () => {
-//     API.getFriends()
-//       .then(res =>
-//         this.setState({
-//           friends: res.data
-//         })
-//       )
-//       .catch(err => console.log(err));
-//   };
+  //   loadFriends = () => {
+  //     API.getFriends()
+  //       .then(res =>
+  //         this.setState({
+  //           friends: res.data
+  //         })
+  //       )
+  //       .catch(err => console.log(err));
+  //   };
 
   render() {
     return (
@@ -44,9 +44,9 @@ class Home extends Component {
         <Row>
           <Col size="md-12">
             <UserCard
-              name={user.name}
-              profile_pic={user.profile_pic}
-              location={user.location}
+              name={this.state.user.name}
+              profile_pic={this.state.user.profile_pic}
+              location={this.state.user.location}
             />
           </Col>
         </Row>
