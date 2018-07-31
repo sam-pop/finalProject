@@ -7,7 +7,7 @@ const GEOCODE_URL =
 
 const DARKSKY_API_KEY = "";
 const DARKSKY_URL = 
-    "https;//api.darksky.net/forecast/" 
+    "https://api.darksky.net/forecast/" 
     + DARKSKY_API_KEY; // add /<latitude>,<longitude>
 
 
