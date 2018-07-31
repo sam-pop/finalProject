@@ -9,7 +9,7 @@ const userSchema = new Schema({
   password   : { type: String, required: true },
   name       : { type: String, required: true },
   profile_pic: String,
-  location   : [ Number, [Number]]
+  location   : [ String, [Number]]
 });
 
 userSchema.pre("save", function(next) {
