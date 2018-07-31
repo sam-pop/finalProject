@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import FriendCard from "../../components/FriendCard/FriendCard";
+import UserCard from "../../components/UserCard/UserCard";
 import MapCard from "../../components/MapCard";
 import { userInfo } from "os";
 
@@ -12,37 +13,37 @@ class Home extends Component {
     friends: []
   };
 
-  componentDidMount() {
-    this.loadUser();
-    this.loadFriends();
-  }
+//   componentDidMount() {
+//     this.loadUser();
+//     this.loadFriends();
+//   }
 
-  loadUser = () => {
-    API.getUser()
-      .then(res =>
-        this.setState({
-          user: res.data
-        })
-      )
-      .catch(err => console.log(err));
-  };
+//   loadUser = () => {
+//     API.getUser()
+//       .then(res =>
+//         this.setState({
+//           user: res.data
+//         })
+//       )
+//       .catch(err => console.log(err));
+//   };
 
-  loadFriends = () => {
-    API.getFriends()
-      .then(res =>
-        this.setState({
-          friends: res.data
-        })
-      )
-      .catch(err => console.log(err));
-  };
+//   loadFriends = () => {
+//     API.getFriends()
+//       .then(res =>
+//         this.setState({
+//           friends: res.data
+//         })
+//       )
+//       .catch(err => console.log(err));
+//   };
 
   render() {
     return (
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <UserCard 
+            <UserCard
               name={user.name}
               profile_pic={user.profile_pic}
               location={user.location}
