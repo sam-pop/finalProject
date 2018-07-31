@@ -5,7 +5,6 @@ import { List, ListItem } from "../../components/List";
 import FriendCard from "../../components/FriendCard/FriendCard";
 import UserCard from "../../components/UserCard/UserCard";
 import MapCard from "../../components/MapCard";
-import { userInfo } from "os";
 
 class Home extends Component {
   state = {
@@ -43,11 +42,11 @@ class Home extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <UserCard
+            {/* <UserCard
               name={this.state.user.name}
               profile_pic={this.state.user.profile_pic}
               location={this.state.user.location}
-            />
+            /> */}
           </Col>
         </Row>
         <Row>
