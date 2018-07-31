@@ -10,19 +10,19 @@ class Home extends Component {
     friends: []
   };
 
-  componentDidMount() {
-    this.loadFriends();
-  }
+//   componentDidMount() {
+//     this.loadFriends();
+//   }
 
-  loadFriends = () => {
-    API.getFriends()
-      .then(res =>
-        this.setState({
-          friends: res.data
-        })
-      )
-      .catch(err => console.log(err));
-  };
+//   loadFriends = () => {
+//     API.getFriends()
+//       .then(res =>
+//         this.setState({
+//           friends: res.data
+//         })
+//       )
+//       .catch(err => console.log(err));
+//   };
 
   render() {
     return (
@@ -47,7 +47,7 @@ class Home extends Component {
             )}
           </Col>
           <Col size="md-12">
-            <MapCard />
+            {/* <MapCa  rd /> */}
           </Col>
         </Row>
       </Container>
