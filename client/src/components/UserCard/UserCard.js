@@ -4,7 +4,7 @@ import Card from "../../components/Card";
 import ProfilePhoto from "../../components/ProfilePhoto";
 import "./UserCard.css";
 
-const UserCard = props => {
+const UserCard = props => (
     <Card>
         <Row>
             <Col size="md-4">
@@ -27,7 +27,7 @@ const UserCard = props => {
             </Col>
         </Row>
     </Card>
-};
+);
 
 export default UserCard;
 
