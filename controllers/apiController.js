@@ -1,4 +1,4 @@
-import axios from "axios";
+const axios = require("axios");
 
 const DARKSKY_API_KEY = "";
 const DARKSKY_URL = 
