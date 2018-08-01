@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 // import { render } from "react-dom";
 // import { Container } from '../Grid';
 import { Map, Marker, TileLayer } from "react-leaflet";
 import "./MapCard.css";
 
 // const position = [29.131109, -36.311774];
-class MapCard extends React.Component {
+class MapCard extends Component {
     constructor() {
         super()
         this.state = {
