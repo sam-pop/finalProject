@@ -1,11 +1,11 @@
 const axios = require("axios");
 
-const DARKSKY_API_KEY = "";
+const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY;
 const DARKSKY_URL = 
     "https://api.darksky.net/forecast/" 
     + DARKSKY_API_KEY; // add /<latitude>,<longitude>
 
-const NEWS_API_KEY = "";
+const NEWS_API_KEY = process.env.NEWS_API_KEY;
 const NEWS_URL = 
     "https://newsapi.org/v2/everything?sources=reuters&apiKey=" 
     + NEWS_API_KEY; // add q=<coutnry> 

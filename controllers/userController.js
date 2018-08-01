@@ -1,7 +1,7 @@
 const db = require("../model");
 const axios = require("axios");
 
-const GEOCODE_API_KEY = "";
+const GEOCODE_API_KEY = process.env.GEOCODE_API_KEY;
 const GEOCODE_URL = 
     "https://maps.googleapis.com/maps/api/geocode/json?key=" 
     + GEOCODE_API_KEY + "&address="; // add <location>
