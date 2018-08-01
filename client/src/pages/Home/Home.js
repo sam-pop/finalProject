@@ -12,7 +12,6 @@ class Home extends Component {
     friends: []
   };
 
-<<<<<<< HEAD
     componentDidMount() {
       // this.loadUser();
       this.loadFriends();
@@ -27,22 +26,6 @@ class Home extends Component {
     //     )
     //     .catch(err => console.log(err));
     // };
-=======
-  componentDidMount() {
-    this.loadUser();
-    this.loadFriends();
-  }
-
-  loadUser = () => {
-    API.getUser()
-      .then(res =>
-        this.setState({
-          user: res.data
-        })
-      )
-      .catch(err => console.log(err));
-  };
->>>>>>> cde32e8b0de90e71f3e732f656abc5e06d29604a
 
   loadFriends = () => {
     API.getFriends()
