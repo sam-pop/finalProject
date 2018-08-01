@@ -1,7 +1,7 @@
 const db = require("../model");
 const axios = require("axios");
 
-const GEOCODE_API_KEY = "";
+const GEOCODE_API_KEY = process.env.GEOCODE_API_KEY;
 const GEOCODE_URL = 
     "https://maps.googleapis.com/maps/api/geocode/json?key=" 
     + GEOCODE_API_KEY + "&address="; // add <location>
@@ -29,7 +29,7 @@ module.exports = {
         const lng = response.data.results[0].geometry.location.lng;
 
         // Friend schema location field format
-        const location = [req.body.location, [lat, lng]];
+        const location = [req.body.location, [[lat], [lng]]];
 
         // Create Friend in db
         db.Friend.create({

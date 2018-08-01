@@ -8,8 +8,8 @@ const userSchema = new Schema({
   email      : { type: String, required: true, index: { unique: true } },
   password   : { type: String, required: true },
   name       : { type: String, required: true },
-  profile_pic: String,
-  location   : [ String, [Number]]
+  profile_pic:         String,
+  location   : [       String, [[Number], [Number]]]
 });
 
 userSchema.pre("save", function(next) {

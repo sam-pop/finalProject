@@ -2,9 +2,10 @@ const db = require("../model");
 const axios = require("axios");
 
 const GEOCODE_API_KEY = process.env.GEOCODE_API_KEY;
-const GEOCODE_URL = 
-    "https://maps.googleapis.com/maps/api/geocode/json?key=" 
-    + GEOCODE_API_KEY + "&address="; // add <location>
+const GEOCODE_URL =
+  "https://maps.googleapis.com/maps/api/geocode/json?key=" +
+  GEOCODE_API_KEY +
+  "&address="; // add <location>
 
 module.exports = {
   findAll: function(req, res) {
@@ -19,9 +20,10 @@ module.exports = {
   },
   create: function(req, res) {
     // make api call to geocode to get lat & lng from provided location
-    axios.get(GEOCODE_URL + req.body.location)
+    axios
+      .get(GEOCODE_URL + req.body.location)
       .then(response => {
-        if (response.data.status === 'ZERO_RESULTS') {
+        if (response.data.status === "ZERO_RESULTS") {
           throw new Error("Unable to find that address.");
         }
 
@@ -29,7 +31,7 @@ module.exports = {
         const lng = response.data.results[0].geometry.location.lng;
 
         // User schema location field format
-        const location = [req.body.location, [lat, lng]];
+        const location = [req.body.location, [[lat], [lng]]];
 
         // Create User in db
         db.User.create({
@@ -39,10 +41,10 @@ module.exports = {
           profile_pic: req.body.profile_pic,
           location: location
         })
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
-
-      }).catch(error => {
+          .then(dbModel => res.json(dbModel))
+          .catch(err => res.status(422).json(err));
+      })
+      .catch(error => {
         console.log(error);
       });
   },
@@ -58,4 +60,3 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
-
