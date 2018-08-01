@@ -32,7 +32,7 @@ const FriendCard = props => (
         <Row>
             <Col size="md-12">
                 <div>
-                    Reminder: {props.reminder}
+                    Note: {props.note}
                 </div>
             </Col>
         </Row>

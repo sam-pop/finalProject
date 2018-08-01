@@ -11,7 +11,7 @@ const NEWS_URL =
     + NEWS_API_KEY; // add q=<coutnry> 
 
 // Defining methods for the apiController for externall api calls
-export default {
+module.exports = {
     getWeather: function(req, res) {
         const weatherURL = DARKSKY_URL + `/${req.params.lat},${req.params.lng}`;
 
