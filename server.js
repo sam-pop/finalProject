@@ -1,10 +1,10 @@
+require('dotenv').config();
 const express = require("express");
 const session = require("express-session");
 const passport = require("./config/passport");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-
 const PORT = process.env.PORT || 3001;
 // Initialize express app
 const app = express();
