@@ -15,7 +15,7 @@ module.exports = {
     getWeather: function(req, res) {
         const weatherURL = DARKSKY_URL + `/${req.params.lat},${req.params.lng}`;
 
-        console.log(`Weather URL: ${weatherURL}` );
+        console.log(`Weather URL: ${weatherURL}`);
 
         return axios.get(weatherURL);
     },
