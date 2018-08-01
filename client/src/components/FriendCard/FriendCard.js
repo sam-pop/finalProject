@@ -7,45 +7,34 @@ import News from "../../components/Weather";
 import "./FriendCard.css";
 
 const FriendCard = props => (
-    <Card>
+  <Card>
+    <Row>
+      <Col size="md-1">
+        <ProfilePhoto name={props.name} profile_pic={props.profile_pic} />
+      </Col>
+      <Col size="md-11">
         <Row>
-            <Col size="md-12">
-                <ProfilePhoto
-                    name={props.name}
-                    profile_pic={props.profile_pic}
-                />
-                <Row>
-                    <Col size="md-12">
-                        Name: {props.name}
-                    </Col>
-                </Row>
-                <Row>
-                    <Col size="md-12">
-                        Location: {props.location}
-                    </Col>
-                </Row>
-                <Weather 
-                    lat={props.lat}
-                    lng={props.lng}
-                    location={props.location}
-                />
-            </Col>
+          <Col size="md-12">Name: {props.name}</Col>
         </Row>
         <Row>
-            <Col size="md-12">
-                <div>
-                    Note: {props.note}
-                </div>
-            </Col>
+          <Col size="md-12">Location: {props.location}</Col>
         </Row>
         <Row>
-            <Col size="md-12">
-                <News 
-                    location={props.location}
-                />
-            </Col>
+          <Col size="md-12">
+            <div>Note: {props.note}</div>
+          </Col>
         </Row>
-    </Card>
+
+        <Weather lat={props.lat} lng={props.lng} location={props.location} />
+      </Col>
+    </Row>
+    <Row />
+    <Row>
+      <Col size="md-12">
+        <News location={props.location} />
+      </Col>
+    </Row>
+  </Card>
 );
 
 export default FriendCard;

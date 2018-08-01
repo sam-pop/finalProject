@@ -27,7 +27,7 @@ render() {
         <Container>
         <Row>
           <Col size="md-12">
-            <div>Temp: {this.state.degrees}</div>
+            <div>{this.state.degrees}</div>
           </Col>
         </Row>
       </Container>

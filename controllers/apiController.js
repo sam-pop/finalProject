@@ -13,12 +13,12 @@ module.exports = {
     const weatherURL = DARKSKY_URL + `/${req.params.lat},${req.params.lng}`;
 
     console.log(`Weather URL: ${weatherURL}`);
-    
-    axios.get(weatherURL).then(function(response) {
+
+    axios.get(weatherURL).then(response => {
       console.log(
         "######################### " + response.data.currently.temperature
       );
-      return response.data.currently.temperature;
+      res.send(response.data.currently.temperature);
     });
   },
   getNews: function(req, res) {
