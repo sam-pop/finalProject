@@ -58,7 +58,9 @@ class Home extends Component {
                     <FriendCard
                       name={friend.name}
                       profile_pic={friend.profile_pic}
-                      location={friend.location[0]}
+                      location={friend.location}
+                      lat={friend.lat}
+                      lng={friend.lng}
                       note={friend.note}
                     />
                   </ListItem>

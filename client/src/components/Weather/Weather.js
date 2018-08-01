@@ -12,7 +12,7 @@ class Weather extends Component {
     }
 
     loadWeather = () => {
-        API.getWeather(this.props.location[1][0], this.props.location[1][1])
+        API.getWeather(this.props.lat, this.props.lng)
             .then(res => 
                 this.setState({ 
                     degrees: res.data.currently.temperature + "° F"
