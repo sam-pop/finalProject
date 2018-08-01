@@ -26,7 +26,7 @@ export default {
   deleteFriend: function(id) {
     return axios.delete("/api/friends/" + id);
   },
-  // Saves a book to the database
+  // Saves a friend to the database
   saveFriend: function(friendData) {
     return axios.post("/api/friends", friendData);
   },
@@ -44,7 +44,7 @@ export default {
   deleteUser: function(id) {
     return axios.delete("/api/users/" + id);
   },
-  // Saves a book to the database
+  // Saves a user to the database
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
   }
