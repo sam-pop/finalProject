@@ -11,6 +11,7 @@ class MapCard extends React.Component {
   constructor() {
     super()
     this.state = {
+      coordinates: [],
       lat: 29.131109,
       lng: -36.311774,
       zoom: 2

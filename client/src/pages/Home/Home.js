@@ -3,29 +3,29 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import FriendCard from "../../components/FriendCard/FriendCard";
-import UserCard from "../../components/UserCard/UserCard";
+// import UserCard from "../../components/UserCard/UserCard";
 import MapCard from "../../components/MapCard";
 
 class Home extends Component {
   state = {
-    user: "",
+    // user: "",
     friends: []
   };
 
     componentDidMount() {
-      this.loadUser();
+      // this.loadUser();
       this.loadFriends();
     }
 
-    loadUser = () => {
-      API.getUser()
-        .then(res =>
-          this.setState({
-            user: res.data
-          })
-        )
-        .catch(err => console.log(err));
-    };
+    // loadUser = () => {
+    //   API.getUser()
+    //     .then(res =>
+    //       this.setState({
+    //         user: res.data
+    //       })
+    //     )
+    //     .catch(err => console.log(err));
+    // };
 
     loadFriends = () => {
       API.getFriends()

@@ -4,7 +4,7 @@ export default {
   // --------- external api calls ----------
   // Gets weather for location
   getWeather: function(lat, lng) {
-    return axios.get("/api/weather/" + lat + "/" + lng);
+    return (axios.get("/api/weather/" + lat + "/" + lng));
   },
   // Gets news for location
   getNews: function(location) {
