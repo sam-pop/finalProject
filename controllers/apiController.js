@@ -24,6 +24,6 @@ export default {
 
         console.log(`News URL: ${newsURL}`);
 
-        return axios.get(newsURL + req.params.location[0]);
+        return axios.get(newsURL + req.params.location);
     }  
 };
