@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 // import { render } from "react-dom";
 // import { Container } from '../Grid';
 import { Map, Marker, TileLayer } from "react-leaflet";

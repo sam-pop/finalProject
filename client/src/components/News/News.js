@@ -13,10 +13,10 @@ class News extends Component {
     }
 
     loadNews = () => {
-        API.getNews(this.props.location) 
+        API.getNews(this.props.location[0]) 
             .then(res => 
                 this.setState({
-                    newsStories: res.data
+                    newsStories: res.data.articles
                 })
             )
             .catch(err => console.log(err));
@@ -30,11 +30,11 @@ class News extends Component {
                     {this.state.newsStories.length ? (
                         <List>
                             {this.state.newsStories.map(story => (
-                                <ListItem key={story.headline}>
+                                <ListItem key={story.title}>
                                     <strong>
-                                        title: {story.headline}
+                                        title: {story.title}
                                     </strong>
-                                    date: {story.date}
+                                    date: {story.publishedAt}
                                 </ListItem>
                             ))}
                         </List>
