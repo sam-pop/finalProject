@@ -40,7 +40,11 @@ class News extends Component {
                             ))}
                         </List>
                     ) : (
-                        <strong>No News to Display</strong>
+                        <List>
+                            <ListItem>
+                                <strong>No News to Display</strong>
+                            </ListItem>
+                        </List>
                     )}
                     </Col>
                 </Row>
