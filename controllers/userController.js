@@ -30,16 +30,15 @@ module.exports = {
         const lat = response.data.results[0].geometry.location.lat;
         const lng = response.data.results[0].geometry.location.lng;
 
-        // User schema location field format
-        const location = [req.body.location, [[lat], [lng]]];
-
         // Create User in db
         db.User.create({
           email: req.body.email,
           password: req.body.password,
           name: req.body.name,
           profile_pic: req.body.profile_pic,
-          location: location
+          location: req.body.location,
+          lat: lat,
+          lng: lng
         })
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));

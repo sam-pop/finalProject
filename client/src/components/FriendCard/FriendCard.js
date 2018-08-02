@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row } from "../../components/Grid";
 import Card from "../../components/Card";
 import ProfilePhoto from "../../components/ProfilePhoto";
 import Weather from "../../components/Weather";

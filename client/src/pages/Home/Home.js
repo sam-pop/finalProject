@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
+import Card from "../../components/Card";
 import FriendCard from "../../components/FriendCard/FriendCard";
 import MapCard from "../../components/MapCard";
 
@@ -27,7 +28,6 @@ class Home extends Component {
         })
       )
       .catch(err => console.log(err));
-    <MapCard friends={this.state.friends} />;
   };
 
   handleInputChange = event => {
@@ -46,7 +46,14 @@ class Home extends Component {
           location: this.state.location,
           note: this.state.note
         })
-          .then(res => this.loadFriends()) 
+          .then(res => {
+            this.loadFriends();
+            this.setState({
+              name: "",
+              location: "",
+              note: ""
+            });
+          })
           .catch(err => console.log(err));
     }
   };
@@ -80,7 +87,7 @@ class Home extends Component {
           </Col>
           <Col size="md-12">
             <Card>
-              <h1>Please fill out info to add a friend</h1>
+              <h4>Please fill out info to add a friend</h4>
               <form>
                 <Input
                   value={this.state.name}
