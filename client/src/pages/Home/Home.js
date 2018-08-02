@@ -62,7 +62,7 @@ class Home extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
+          {/* <Col size="md-12">
             {this.state.friends.length ? (
               <List>
                 {Array.from(this.state.friends).map(friend => (
@@ -85,7 +85,7 @@ class Home extends Component {
           </Col>
           <Col size="md-12">
             <MapCard friends={this.state.friends} />
-          </Col>
+          </Col> */}
           <Col size="md-12">
             <Card>
               <h3 style={{textAlign: "center", marginTop: 10}}>Please fill out info to add a friend</h3>
