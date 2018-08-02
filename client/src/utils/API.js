@@ -12,7 +12,7 @@ export default {
   // Gets news for location
   getNews: function(location) {
     const NEWS_API_KEY = "277364822b97433ebb96c7413e3036a0";
-    const NEWS_URL = "https://newsapi.org/v2/everything?sources=reuters&apiKey=" + NEWS_API_KEY; // add &q=<coutnry>
+    const NEWS_URL = "https://newsapi.org/v2/everything?sources=reuters&pageSize=5&apiKey=" + NEWS_API_KEY; // add &q=<coutnry>
 
     return axios.get(NEWS_URL + `&q=${location}`);
   },

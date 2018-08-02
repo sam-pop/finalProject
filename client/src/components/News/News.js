@@ -35,7 +35,7 @@ class News extends Component {
                                         {story.title}
                                     </strong>
                                     <br></br>
-                                    date: {story.publishedAt}
+                                    <small>date: {story.publishedAt}</small>
                                 </ListItem>
                             ))}
                         </List>

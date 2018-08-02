@@ -68,6 +68,7 @@ class Home extends Component {
                 {Array.from(this.state.friends).map(friend => (
                   <ListItem key={friend._id}>
                     <FriendCard
+                    style={{float: "left"}}
                       name={friend.name}
                       profile_pic={friend.profile_pic}
                       location={friend.location}
@@ -87,7 +88,7 @@ class Home extends Component {
           </Col>
           <Col size="md-12">
             <Card>
-              <h4>Please fill out info to add a friend</h4>
+              <h3 style={{textAlign: "center", marginTop: 10}}>Please fill out info to add a friend</h3>
               <form>
                 <Input
                   value={this.state.name}
