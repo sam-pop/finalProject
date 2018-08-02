@@ -63,7 +63,7 @@ class Home extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            {this.state.friends.length ? (
+            {this.state.friends.length > 1 ? (
               <List>
                 {Array.from(this.state.friends).map(friend => (
                   <ListItem key={friend._id}>
