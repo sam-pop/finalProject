@@ -3,7 +3,7 @@ import { Col, Row } from "../../components/Grid";
 import Card from "../../components/Card";
 import ProfilePhoto from "../../components/ProfilePhoto";
 import Weather from "../../components/Weather";
-import News from "../../components/Weather";
+import News from "../../components/News";
 import "./FriendCard.css";
 
 const FriendCard = props => (

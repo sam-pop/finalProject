@@ -32,14 +32,15 @@ class News extends Component {
                             {this.state.newsStories.map(story => (
                                 <ListItem key={story.title}>
                                     <strong>
-                                        title: {story.title}
+                                        {story.title}
                                     </strong>
+                                    <br></br>
                                     date: {story.publishedAt}
                                 </ListItem>
                             ))}
                         </List>
                     ) : (
-                        <h3>No News to Display</h3>
+                        <strong>No News to Display</strong>
                     )}
                     </Col>
                 </Row>

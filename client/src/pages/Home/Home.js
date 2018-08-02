@@ -99,7 +99,7 @@ class Home extends Component {
                   value={this.state.location}
                   onChange={this.handleInputChange}
                   name="location"
-                  placeholder="location (ex: Washington, DC)"
+                  placeholder="location (ex: state/province, Country)"
                 />
                 <Input
                   value={this.state.note}
