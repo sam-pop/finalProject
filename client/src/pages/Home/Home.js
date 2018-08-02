@@ -12,20 +12,20 @@ class Home extends Component {
     friends: []
   };
 
-    componentDidMount() {
-      // this.loadUser();
-      this.loadFriends();
-    }
+  componentDidMount() {
+    // this.loadUser();
+    this.loadFriends();
+  }
 
-    // loadUser = () => {
-    //   API.getUser()
-    //     .then(res =>
-    //       this.setState({
-    //         user: res.data
-    //       })
-    //     )
-    //     .catch(err => console.log(err));
-    // };
+  // loadUser = () => {
+  //   API.getUser()
+  //     .then(res =>
+  //       this.setState({
+  //         user: res.data
+  //       })
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   loadFriends = () => {
     API.getFriends()
@@ -35,6 +35,7 @@ class Home extends Component {
         })
       )
       .catch(err => console.log(err));
+    <MapCard friends={this.state.friends} />;
   };
 
   render() {
@@ -71,7 +72,7 @@ class Home extends Component {
             )}
           </Col>
           <Col size="md-12">
-            <MapCard />
+            <MapCard friends={this.state.friends} />
           </Col>
         </Row>
       </Container>

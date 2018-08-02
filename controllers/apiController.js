@@ -18,7 +18,7 @@ module.exports = {
       console.log(
         "######################### " + response.data.currently.temperature
       );
-      res.send(response.data.currently.temperature);
+      res.json(response);
     });
   },
   getNews: function(req, res) {
