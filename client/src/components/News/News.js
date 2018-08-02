@@ -13,7 +13,7 @@ class News extends Component {
     }
 
     loadNews = () => {
-        API.getNews(this.props.location[0]) 
+        API.getNews(this.props.location) 
             .then(res => 
                 this.setState({
                     newsStories: res.data.articles
@@ -32,14 +32,19 @@ class News extends Component {
                             {this.state.newsStories.map(story => (
                                 <ListItem key={story.title}>
                                     <strong>
-                                        title: {story.title}
+                                        {story.title}
                                     </strong>
+                                    <br></br>
                                     date: {story.publishedAt}
                                 </ListItem>
                             ))}
                         </List>
                     ) : (
-                        <h3>No News to Display</h3>
+                        <List>
+                            <ListItem>
+                                <strong>No News to Display</strong>
+                            </ListItem>
+                        </List>
                     )}
                     </Col>
                 </Row>

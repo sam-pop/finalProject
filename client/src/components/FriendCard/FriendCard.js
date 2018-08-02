@@ -1,9 +1,9 @@
 import React from "react";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row } from "../../components/Grid";
 import Card from "../../components/Card";
 import ProfilePhoto from "../../components/ProfilePhoto";
 import Weather from "../../components/Weather";
-import News from "../../components/Weather";
+import News from "../../components/News";
 import "./FriendCard.css";
 
 const FriendCard = props => (
@@ -25,7 +25,7 @@ const FriendCard = props => (
           </Col>
         </Row>
 
-        <Weather lat={props.lat} lng={props.lng} location={props.location} />
+        <Weather lat={props.lat} lng={props.lng} />
       </Col>
     </Row>
     <Row />

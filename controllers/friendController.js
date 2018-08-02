@@ -28,14 +28,14 @@ module.exports = {
         const lat = response.data.results[0].geometry.location.lat;
         const lng = response.data.results[0].geometry.location.lng;
 
-        // Friend schema location field format
-        const location = [req.body.location, [[lat], [lng]]];
-
         // Create Friend in db
         db.Friend.create({
           name: req.body.name,
           profile_pic: req.body.profile_pic,
-          location: location
+          location: req.body.location,
+          lat: lat,
+          lng: lng,
+          note: req.body.note
         })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
