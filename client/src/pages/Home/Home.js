@@ -63,7 +63,6 @@ class Home extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            {this.state.friends.length > 1 ? (
               <List>
                 {Array.from(this.state.friends).map(friend => (
                   <ListItem key={friend._id}>
@@ -79,9 +78,7 @@ class Home extends Component {
                   </ListItem>
                 ))}
               </List>
-            ) : (
-              <h2>No Friends to Display!</h2>
-            )}
+      
           </Col>
           <Col size="md-12">
             <MapCard friends={this.state.friends} />
