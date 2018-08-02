@@ -65,7 +65,7 @@ class Home extends Component {
           <Col size="md-12">
             {this.state.friends.length ? (
               <List>
-                {this.state.friends.map(friend => (
+                {Array.from(this.state.friends).map(friend => (
                   <ListItem key={friend._id}>
                     <FriendCard
                       name={friend.name}
