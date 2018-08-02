@@ -2,30 +2,22 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
+import { Input, FormBtn } from "../../components/Form";
 import FriendCard from "../../components/FriendCard/FriendCard";
-// import UserCard from "../../components/UserCard/UserCard";
 import MapCard from "../../components/MapCard";
 
 class Home extends Component {
   state = {
-    // user: "",
-    friends: []
+    friends: [],
+    // add friend properties
+    name: "",
+    location: "",
+    note: ""
   };
 
   componentDidMount() {
-    // this.loadUser();
     this.loadFriends();
   }
-
-  // loadUser = () => {
-  //   API.getUser()
-  //     .then(res =>
-  //       this.setState({
-  //         user: res.data
-  //       })
-  //     )
-  //     .catch(err => console.log(err));
-  // };
 
   loadFriends = () => {
     API.getFriends()
@@ -38,18 +30,30 @@ class Home extends Component {
     <MapCard friends={this.state.friends} />;
   };
 
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.name && this.state.location 
+      && this.state.note) {
+        API.saveFriend({
+          name: this.state.name,
+          location: this.state.location,
+          note: this.state.note
+        })
+          .then(res => this.loadFriends()) 
+          .catch(err => console.log(err));
+    }
+  };
+
   render() {
     return (
       <Container fluid>
-        <Row>
-          <Col size="md-12">
-            {/* <UserCard
-              name={this.state.user.name}
-              profile_pic={this.state.user.profile_pic}
-              location={this.state.user.location}
-            /> */}
-          </Col>
-        </Row>
         <Row>
           <Col size="md-12">
             {this.state.friends.length ? (
@@ -73,6 +77,37 @@ class Home extends Component {
           </Col>
           <Col size="md-12">
             <MapCard friends={this.state.friends} />
+          </Col>
+          <Col size="md-12">
+            <Card>
+              <h1>Please fill out info to add a friend</h1>
+              <form>
+                <Input
+                  value={this.state.name}
+                  onChange={this.handleInputChange}
+                  name="name"
+                  placeholder="name"
+                />
+                <Input
+                  value={this.state.location}
+                  onChange={this.handleInputChange}
+                  name="location"
+                  placeholder="location (ex: Washington, DC)"
+                />
+                <Input
+                  value={this.state.note}
+                  onChange={this.handleInputChange}
+                  name="note"
+                  placeholder="note/reminder"
+                />
+                <FormBtn
+                  disabled={!(this.state.name && this.state.location && this.state.note)}
+                  onClick={this.handleFormSubmit}
+                >
+                  Add Friend
+                </FormBtn>
+              </form>
+            </Card>
           </Col>
         </Row>
       </Container>

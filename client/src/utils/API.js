@@ -4,11 +4,17 @@ export default {
   // --------- external api calls ----------
   // Gets weather for location
   getWeather: function(lat, lng) {
-    return (axios.get("/api/weather/" + lat + "/" + lng));
+    const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY;
+    const DARKSKY_URL = "https://api.darksky.net/forecast/" + DARKSKY_API_KEY; // add /<latitude>,<longitude>
+
+    return axios.get(DARKSKY_URL + `/${lat},${lng}`);
   },
   // Gets news for location
   getNews: function(location) {
-    return axios.get("/api/news/" + location);
+    const NEWS_API_KEY = process.env.NEWS_API_KEY;
+    const NEWS_URL = "https://newsapi.org/v2/everything?sources=reuters&apiKey=" + NEWS_API_KEY; // add &q=<coutnry>
+
+    return axios.get(NEWS_URL + `&q=${location}`);
   },
 
   // -------- mongo database calls ---------
