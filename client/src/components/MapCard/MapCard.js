@@ -21,9 +21,9 @@ class MapCard extends Component {
     markers.push(e.latlng);
     this.setState({ markers });
   };
+
   render() {
     const position = [this.state.lat, this.state.lng];
-    const { friends } = this.props;
     return (
       <div className="leaflet-container">
         <Map
@@ -37,13 +37,18 @@ class MapCard extends Component {
             id="mapbox.light"
             accessToken="pk.eyJ1IjoibWNhcDkiLCJhIjoiY2pqOG1wZ3UzMDZ2ZjNwcjNjMHBiM2RzOSJ9.hpn8KPTKIVENiO1zBJBJUA"
           />
+          
           {/* {this.state.markers.map((position, idx) =>
             <Marker key={`marker-${idx}`} position={position} icon={iconMarker}>
             </Marker>
           )} */}
-          {/* <Marker position={[{ friends }, {friends}]} icon={iconMarker} /> */}
-          <Marker position={[51.528308, -0.3817797]} icon={iconMarker} />
-          <Marker position={[21.528308, -0.3817797]} icon={iconMarker} />
+          
+          {this.props.friends.map(friend => (
+            <Marker
+              position={[friend.lat, friend.lng]}
+              icon={iconMarker}
+            />
+          ))}
         </Map>
       </div>
     );
