@@ -63,9 +63,9 @@ class Home extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            {this.state.friends.length ? (
-              <List >
-                {this.state.friends.map(friend => (
+            {this.state.friends.length > 1 ? (
+              <List>
+                {Array.from(this.state.friends).map(friend => (
                   <ListItem key={friend._id}>
                     <FriendCard
                     style={{float: "left"}}
