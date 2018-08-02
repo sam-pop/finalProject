@@ -13,7 +13,7 @@ class News extends Component {
     }
 
     loadNews = () => {
-        API.getNews(this.props.location[0]) 
+        API.getNews(this.props.location) 
             .then(res => 
                 this.setState({
                     newsStories: res.data.articles

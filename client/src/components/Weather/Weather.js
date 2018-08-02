@@ -15,11 +15,10 @@ class Weather extends Component {
     API.getWeather(this.props.lat, this.props.lng)
       .then(res => 
         this.setState({
-            degrees: res + "° F"
+            degrees: res.data.currently.temperature + " ° F"
         })
     )
     .catch(err => console.log(err));
-    console.log("!!!!!!!!!!!!! " + this.state.degrees);
 };
 
 render() {

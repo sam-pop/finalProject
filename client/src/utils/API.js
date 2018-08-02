@@ -4,7 +4,7 @@ export default {
   // --------- external api calls ----------
   // Gets weather for location
   getWeather: function(lat, lng) {
-    const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY;
+    const DARKSKY_API_KEY = "e05c706e7ef08da86d7958131e737b10";
     const DARKSKY_URL = "https://api.darksky.net/forecast/" + DARKSKY_API_KEY; // add /<latitude>,<longitude>
 
     return axios.get(DARKSKY_URL + `/${lat},${lng}`);
