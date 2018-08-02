@@ -24,7 +24,7 @@ class Home extends Component {
     API.getFriends()
       .then(res =>
         this.setState({
-          friends: res.data
+          friends: Array.from(res.data)
         })
       )
       .catch(err => console.log(err));
