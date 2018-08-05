@@ -7,7 +7,7 @@ const db = require("../model");
 const express = require("express");
 const mongoose = require("mongoose");
 
-const User = require("../model/User");
+// const User = require("../model/User");
 module.exports = function(app) {
 //   var testUser = new User({
 //     email: "jmar777@gmail.com",
