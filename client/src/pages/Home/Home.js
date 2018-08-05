@@ -62,13 +62,13 @@ class Home extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
+          <Col size="md-5">
             {this.state.friends.length ? (
-              <List>
-                {Array.from(this.state.friends).map(friend => (
+              <List >
+                {this.state.friends.map(friend => (
                   <ListItem key={friend._id}>
                     <FriendCard
-                    style={{float: "left"}}
+                      style={{float: "left"}}
                       name={friend.name}
                       profile_pic={friend.profile_pic}
                       location={friend.location}
@@ -83,7 +83,7 @@ class Home extends Component {
               <h2>No Friends to Display!</h2>
             )}
           </Col>
-          <Col size="md-12">
+          <Col size="md-7" style={{float: "left"}}>
             <MapCard friends={this.state.friends} />
           </Col>
           <Col size="md-12">
