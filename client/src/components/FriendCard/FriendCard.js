@@ -9,10 +9,10 @@ import "./FriendCard.css";
 const FriendCard = props => (
   <Card className="card">
     <Row>
-      <Col size="md-1"  style={{paddingRight: 10}}>
+      <Col size="md-3"  style={{paddingRight: 10}}>
         <ProfilePhoto name={props.name} profile_pic={props.profile_pic} />
       </Col>
-      <Col size="md-11">
+      <Col size="md-9">
         <Row>
           <Col size="md-12">Name: {props.name}</Col>
         </Row>

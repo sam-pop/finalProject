@@ -11,11 +11,12 @@ class MapCard extends Component {
     super();
     this.state = {
       markers: [],
-      lat: 29.131109,
-      lng: -36.311774,
-      zoom: 2
+      lat: -6.691378,
+      lng: -18.196010,
+      zoom: 1.5
     };
   }
+  // -6.691378, -18.196010
   addMarker = e => {
     const { markers } = this.props.friends;
     markers.push(e.latlng);
