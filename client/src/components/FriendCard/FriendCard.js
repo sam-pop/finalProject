@@ -25,7 +25,7 @@ const FriendCard = props => (
           </Col>
         </Row>
 
-        {/* <Weather lat={props.lat} lng={props.lng} /> */}
+        <Weather lat={props.lat} lng={props.lng} />
       </Col>
     </Row>
     <Row />
