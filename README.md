@@ -23,7 +23,7 @@ In The Loop is a web app designed for users that want to stay in-touch with peop
 
 The purpose of this app is to help users keep track / better connect with their remote friends.
 
-A user can input his friends location and the app will display information from where they are such as: current temperature, latest news headlines and a personal note / reminder that the user added to help him remember an event / topic of conversation to follow up on / meaningful event in his friend life.
+A user can input his friends location and the app will display information from where they are such as: current temperature, latest news headlines and a personal note / reminder that the user added to help him remember an event / topic of conversation to follow up on / meaningful event in his friend's life.
 
 > _Check out the repo [**Wiki**](https://github.com/sam-pop/inTheLoop/wiki) section for detailed user-stories, database diagrams & file structure._
 
