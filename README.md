@@ -19,7 +19,7 @@
 
 **Your friends have all moved, but you just can’t move on...**
 
-In The Loop is a web app designed for users that want to keep-in-touch with people all over the world.
+In The Loop is a web app designed for users that want to stay in-touch with people all over the world.
 
 The purpose of this app is to help users keep track / better connect with their remote friends.
 
