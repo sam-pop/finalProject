@@ -9,6 +9,7 @@
 - [What we used](#tech)
 - [Team members](#team-members)
 - [Demo](#demo)
+- [Future development](#future)
 
 ## <a name="dec"></a>Project description
 
