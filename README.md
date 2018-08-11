@@ -1,4 +1,4 @@
-# In The Loop (WIP)
+# In The Loop [WIP]
 
 ## Table of Contents
 
