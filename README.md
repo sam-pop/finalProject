@@ -2,8 +2,6 @@
 
 ## Table of Contents
 
----
-
 - [Project description](#desc)
 - [How to use](#how)
 - [What we used](#tech)
@@ -12,8 +10,6 @@
 - [Future development](#future)
 
 ## <a name="dec"></a>Project description
-
----
 
 > _In The Loop is a fully responsive, React.js/MongoDB/Mongoose/Node.js/Express/Axios MVC web app that was built in a few days as a full-stack coding project._
 
@@ -28,8 +24,6 @@ A user can input his friends location and the app will display information from 
 > _Check out the repo [**Wiki**](https://github.com/sam-pop/inTheLoop/wiki) section for detailed user-stories, database diagrams & file structure._
 
 ## <a name="how"></a>How to use
-
----
 
 First, Make sure you have [mongoDB Community Server](https://www.mongodb.com/download-center?jmp=nav#community) installed on your machine.
 
@@ -70,8 +64,6 @@ Make sure your mongoDB server service is running and that you are in the root di
 
 ## <a name="team-members"></a>Team members
 
----
-
 - [Salma Al-Qathab](https://github.com/Salmaalqathab)
 - [Martina Caputy](https://github.com/mecaputy)
 - [Samuel Poplovitch](https://github.com/sam-pop/)
@@ -79,15 +71,19 @@ Make sure your mongoDB server service is running and that you are in the root di
 
 ## <a name="demo"></a> Demo
 
----
-
 [![Screenshot](https://s33.postimg.cc/80q39b1a7/screen_Grab1.gif)](https://postimg.cc/image/6loikl06z/)
 
 ## <a name="future"></a> Future development
-
----
 
 - Updated design elements
 - Additional components i.e. holidays
 - Adding users and user authentication
 - React native mobile app
+
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :)
